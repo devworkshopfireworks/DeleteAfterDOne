@@ -1,0 +1,52 @@
+<nav class="navbox">
+  <a class="navbox-item nav-logo first-item">
+    <img src="/assets/brand/kundalini-logo.svg" class="d-inline-block" alt="kundalini">
+  </a>
+  <div class="navbox-item nav-logo-text second-item push-left-medium">  
+      <a>  Kundalini</a> 
+  </div>  
+ <div class="navbox-item wide-item third-item">
+ <div class="push-right">   
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+        <button class="btn  my-2 my-sm-0 " type="submit">Search</button>
+      </form>
+    </div> 
+  </div>
+  <div class="navbox-item space-around fourth-item">
+  <div class="push-right-large push-right-medium kart">
+   <img src="/assets/brand/shop.svg"  class="d-inline-block" alt="kundalini">
+  </div>
+  </div>
+  <div class="dropdown navbox-item fifth-item">
+    <div class="dropmenu push-right-large push-right-medium"> 
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+        Customer Name
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" [routerLink]="'signin'">Sign In</a>
+        <a class="dropdown-item" [routerLink]="'placeOrder'">Place Order</a>
+        <a class="dropdown-item" [routerLink]="'whyus'">Why Us</a>
+      </div>
+    </div>
+    <div class="menu-border">
+        <div class="menu"></div>
+        <div class="menu"></div>
+        <div class="menu"></div>
+        </div>
+   </div> 
+   <div class="navbox-item space-around last-item">
+    <div class="push-right-large push-right-medium kart">
+     <img src="/assets/menu-icons/mobile_item_icon.svg" (click)="openNav()" class="d-inline-block" alt="kundalini">
+    </div>
+    </div>
+</nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+ <a *ngFor='let itemMenu of itemMenus'(click)="closeNav()" [routerLink]='itemMenu.crackerIconURL'>
+      <div class="imageDiv"><img [src]="itemMenu.crackerIconImagePath" [alt]="itemMenu.crackerTitleText"></div>
+      <div class="iconText">{{itemMenu.crackerTitleText}}</div>
+    </a>
+</div>
+<!-- <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span> -->

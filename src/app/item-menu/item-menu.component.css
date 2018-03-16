@@ -1,0 +1,55 @@
+ul {
+    margin: 0;
+    font-family: 'Mina', sans-serif;
+    font-size: 12px;
+    padding: 10px;
+    display:flex;
+    justify-content: space-around;
+    list-style-type: none;
+    box-sizing: border-box;
+    background: rgb(233, 225, 10) ; /* For browsers that do not support gradients */
+    background: repeating-linear-gradient(rgb(83, 72, 33),rgba(255, 208, 0, 0.85) 10%,rgb(233, 255, 10) 10%,rgb(233, 225, 10) 90%,rgba(255, 208, 0, 0.85) 90%,rgb(83, 72, 33)100%);
+}
+img{
+    width:60px;
+    height:60px;
+}
+
+.menuItem{
+    display:inline-block;
+    margin:0px 10px;
+}
+
+.imageDiv{
+    padding :2px;
+}
+.iconText{
+    text-align:center;
+}
+
+a{
+    text-decoration: none;
+}
+a:link,a:visited {
+    color: black;
+    font-weight: bold;
+}
+
+a:hover,a:active  {
+    color: #FF7400;
+}
+
+.imageDiv:hover {
+    border-radius:50%;
+    background-color: #FF7400; 
+}
+
+
+
+@media only screen and (max-width: 721px) {
+    ul {
+        flex-wrap: wrap;
+        display:none;
+    }
+    
+}
